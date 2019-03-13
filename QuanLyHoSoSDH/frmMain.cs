@@ -28,5 +28,17 @@ namespace QuanLyHoSoSDH
             this.Hide();
             frmQLHS.ShowDialog();
         }
+
+        private void bt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnYKNH_Click(object sender, EventArgs e)
+        {
+            frmYKNH frmYKNH = new frmYKNH();
+            this.Hide();
+            frmYKNH.ShowDialog();
+        }
     }
 }

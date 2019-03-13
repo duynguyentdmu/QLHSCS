@@ -19,6 +19,18 @@ namespace QuanLyHoSoSDH
 {
     public partial class frmLogin : Form
     {
+
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "8nRfThVBUj182flmg4hA88mxFOHd9MgQY6YxsMGH",
+        BasePath = "https://sdhtdmu.firebaseio.com/"
+        };
+
+
+        IFirebaseClient client;
+
+
+
         public frmLogin()
         {
             InitializeComponent();
@@ -30,7 +42,7 @@ namespace QuanLyHoSoSDH
             Application.Exit();
         }
 
-        private void btLogin_Click(object sender, EventArgs e)
+        private async void btLogin_ClickAsync(object sender, EventArgs e)
         {
             if (tbPass.Text == "1") {
                 frmMain frmMain = new frmMain();
@@ -38,9 +50,39 @@ namespace QuanLyHoSoSDH
                 
                 frmMain.ShowDialog();
             }
+
+            var data = new Data
+            {
+                Id = tbId.Text,
+                Password = tbPass.Text
+            };
+
+
+            SetResponse setResponse = await client.SetTaskAsync("Information/" + tbId.Text, data);
+            SetResponse response = setResponse;
+            Data result = response.ResultAs<Data>();
+
+            MessageBox.Show("Data Inserted " + result.Id);
+             
+
+
+
+
+
+
+
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
+        {
+            client = new FireSharp.FirebaseClient(config);
+            if(client!=null)
+            {
+                MessageBox.Show("ket noi thanh cong!");
+            }
+        }
+
+        private void tbPass_TextChanged(object sender, EventArgs e)
         {
 
         }

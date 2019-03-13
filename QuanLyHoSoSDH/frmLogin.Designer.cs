@@ -34,6 +34,7 @@
             this.btExit = new System.Windows.Forms.Button();
             this.btLogin = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbId = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,20 +61,21 @@
             // tbPass
             // 
             this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPass.Location = new System.Drawing.Point(6, 57);
+            this.tbPass.Location = new System.Drawing.Point(6, 114);
             this.tbPass.Multiline = true;
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(403, 37);
             this.tbPass.TabIndex = 1;
             this.tbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbPass.TextChanged += new System.EventHandler(this.tbPass_TextChanged);
             // 
             // btExit
             // 
             this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.Color.Red;
-            this.btExit.Location = new System.Drawing.Point(419, 57);
+            this.btExit.Location = new System.Drawing.Point(422, 101);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(175, 37);
             this.btExit.TabIndex = 2;
@@ -86,31 +88,43 @@
             this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.ForeColor = System.Drawing.Color.Green;
-            this.btLogin.Location = new System.Drawing.Point(419, 14);
+            this.btLogin.Location = new System.Drawing.Point(422, 58);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(175, 37);
             this.btLogin.TabIndex = 2;
             this.btLogin.Text = "TRUY CẬP";
             this.btLogin.UseVisualStyleBackColor = true;
-            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
+            this.btLogin.Click += new System.EventHandler(this.btLogin_ClickAsync);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btLogin);
             this.groupBox2.Controls.Add(this.btExit);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.tbId);
             this.groupBox2.Controls.Add(this.tbPass);
             this.groupBox2.Location = new System.Drawing.Point(12, 49);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(603, 109);
+            this.groupBox2.Size = new System.Drawing.Size(603, 166);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            // 
+            // tbId
+            // 
+            this.tbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbId.Location = new System.Drawing.Point(6, 58);
+            this.tbId.Multiline = true;
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(403, 37);
+            this.tbId.TabIndex = 1;
+            this.tbId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbId.TextChanged += new System.EventHandler(this.tbPass_TextChanged);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 162);
+            this.ClientSize = new System.Drawing.Size(627, 224);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -134,6 +148,7 @@
         private System.Windows.Forms.Button btExit;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tbId;
     }
 }
 

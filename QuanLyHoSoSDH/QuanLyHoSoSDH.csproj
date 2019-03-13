@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +77,18 @@
     <Compile Include="frmQLHS.Designer.cs">
       <DependentUpon>frmQLHS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTestChucNangFireBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestChucNangFireBase.Designer.cs">
+      <DependentUpon>frmTestChucNangFireBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYKNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYKNH.Designer.cs">
+      <DependentUpon>frmYKNH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -86,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLHS.resx">
       <DependentUpon>frmQLHS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYKNH.resx">
+      <DependentUpon>frmYKNH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
