@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//them thu vien cua fire base
+using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+
+
+
 namespace QuanLyHoSoSDH
 {
     public partial class frmLogin : Form
@@ -31,6 +38,11 @@ namespace QuanLyHoSoSDH
                 
                 frmMain.ShowDialog();
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

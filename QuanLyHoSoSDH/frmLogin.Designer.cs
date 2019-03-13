@@ -118,6 +118,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BẢO VỆ ỨNG DỤNG";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
