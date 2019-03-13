@@ -40,5 +40,12 @@ namespace QuanLyHoSoSDH
             this.Hide();
             frmYKNH.ShowDialog();
         }
+
+        private void btCNFB_Click(object sender, EventArgs e)
+        {
+            frmCNFB frmCNFB = new frmCNFB();
+            this.Hide();
+            frmCNFB.ShowDialog();
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace QuanLyHoSoSDH
         IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "8nRfThVBUj182flmg4hA88mxFOHd9MgQY6YxsMGH",
-        BasePath = "https://sdhtdmu.firebaseio.com/"
+            BasePath = "https://sdhtdmu.firebaseio.com/"
         };
 
 
@@ -46,43 +46,41 @@ namespace QuanLyHoSoSDH
         {
             if (tbPass.Text == "1") {
                 frmMain frmMain = new frmMain();
-                this.Hide();
-                
+                this.Hide(); 
                 frmMain.ShowDialog();
             }
 
-            var data = new Data
-            {
-                Id = tbId.Text,
-                Password = tbPass.Text
-            };
+            //var data = new Data
+            //{
+            //    Id = tbId.Text,
+            //    Password = tbPass.Text
+            //};
 
 
-            SetResponse setResponse = await client.SetTaskAsync("Information/" + tbId.Text, data);
-            SetResponse response = setResponse;
-            Data result = response.ResultAs<Data>();
+            //SetResponse setResponse = await client.SetTaskAsync("Information/" + tbId.Text, data);
+            //SetResponse response = setResponse;
+            //Data result = response.ResultAs<Data>();
 
-            MessageBox.Show("Data Inserted " + result.Id);
+            //MessageBox.Show("Data Inserted " + result.Id);
              
-
-
-
-
-
-
-
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            client = new FireSharp.FirebaseClient(config);
-            if(client!=null)
-            {
-                MessageBox.Show("ket noi thanh cong!");
-            }
+            tbId.Focus();
+            //client = new FireSharp.FirebaseClient(config);
+            //if(client!=null)
+            //{
+            //    MessageBox.Show("ket noi thanh cong!");
+            //}
         }
 
         private void tbPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPass_TextChanged_1(object sender, EventArgs e)
         {
 
         }
