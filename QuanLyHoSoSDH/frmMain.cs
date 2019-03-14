@@ -19,7 +19,8 @@ namespace QuanLyHoSoSDH
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
         }
 
         private void btQLHS_Click(object sender, EventArgs e)

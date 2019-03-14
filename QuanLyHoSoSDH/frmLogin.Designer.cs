@@ -60,7 +60,7 @@
             this.btExit.Location = new System.Drawing.Point(406, 147);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(175, 37);
-            this.btExit.TabIndex = 2;
+            this.btExit.TabIndex = 3;
             this.btExit.Text = "THOÁT";
             this.btExit.UseVisualStyleBackColor = true;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
@@ -77,7 +77,7 @@
             this.btLogin.TabIndex = 2;
             this.btLogin.Text = "ĐĂNG NHẬP";
             this.btLogin.UseVisualStyleBackColor = true;
-            this.btLogin.Click += new System.EventHandler(this.btLogin_ClickAsync);
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // tbId
             // 
@@ -89,7 +89,7 @@
             this.tbId.Multiline = true;
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(280, 37);
-            this.tbId.TabIndex = 3;
+            this.tbId.TabIndex = 0;
             this.tbId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbPass
@@ -102,7 +102,7 @@
             this.tbPass.Multiline = true;
             this.tbPass.Name = "tbPass";
             this.tbPass.Size = new System.Drawing.Size(280, 37);
-            this.tbPass.TabIndex = 3;
+            this.tbPass.TabIndex = 1;
             this.tbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbPass.TextChanged += new System.EventHandler(this.tbPass_TextChanged_1);
             // 

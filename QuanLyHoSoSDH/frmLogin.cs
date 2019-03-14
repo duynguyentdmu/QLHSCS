@@ -38,11 +38,15 @@ namespace QuanLyHoSoSDH
 
         private void btExit_Click(object sender, EventArgs e)
         {
-
-            Application.Exit();
+            // thoat chuong trinh
+            DialogResult a = new DialogResult();
+            a = MessageBox.Show("Bạn có muốn thoát chương trình hay không?", "THÔNG BÁO!", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (a == DialogResult.OK) { Application.Exit(); }
+           if (a == DialogResult.Cancel) { tbId.Focus(); }
+            //Application.Exit();
         }
 
-        private async void btLogin_ClickAsync(object sender, EventArgs e)
+        private void btLogin_Click(object sender, EventArgs e)
         {
             if (tbPass.Text == "1") {
                 frmMain frmMain = new frmMain();

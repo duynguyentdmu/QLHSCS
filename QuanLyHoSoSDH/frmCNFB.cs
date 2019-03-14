@@ -25,6 +25,8 @@ namespace QuanLyHoSoSDH
             BasePath = "https://sdhtdmu.firebaseio.com/"
         };
         IFirebaseClient client;
+        private object data;
+
         // ket thuc mo ta
 
 
@@ -49,7 +51,6 @@ namespace QuanLyHoSoSDH
         {
             // private async void btLogin_ClickAsync(object sender, EventArgs e)
 
-
             var data = new Data
             {
                 MaSv = tbMasv.Text,
@@ -57,14 +58,38 @@ namespace QuanLyHoSoSDH
                 Tuoi = tbTuoi.Text
             };
 
-
             SetResponse setResponse = await client.SetTaskAsync("Information/" + tbMasv.Text, data);
             SetResponse response = setResponse;
             Data result = response.ResultAs<Data>();
-
             MessageBox.Show("Đã Thêm " + result.Id);
 
 
+        }
+
+        private void btx_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btget_Click(object sender, EventArgs e)
+        {
+            // FirebaseResponse response = await  client.GetTaskAsync()
+            //FirebaseResponse getResponse = await client.GetTaskAsync("Information/" + tbMasv.Text);
+
+            SetResponse getResponse = await client.SetTaskAsync("Information/" + tbMasv.Text, data);
+            SetResponse response = getResponse;
+
+            Data obj = getResponse.ResultAs<Data>();
+
+            tbMasv.Text = obj.Id;
+            tbTen.Text = obj.Ten;
+            tbTuoi.Text = obj.Tuoi;
+            MessageBox.Show("lay du lieu thanh cong!");
         }
     }
 }

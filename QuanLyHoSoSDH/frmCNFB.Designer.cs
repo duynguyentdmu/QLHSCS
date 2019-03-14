@@ -37,6 +37,7 @@
             this.bts = new System.Windows.Forms.Button();
             this.btx = new System.Windows.Forms.Button();
             this.btt = new System.Windows.Forms.Button();
+            this.btget = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -110,6 +111,7 @@
             this.bts.TabIndex = 6;
             this.bts.Text = "SỬA";
             this.bts.UseVisualStyleBackColor = true;
+            this.bts.Click += new System.EventHandler(this.bts_Click);
             // 
             // btx
             // 
@@ -122,6 +124,7 @@
             this.btx.TabIndex = 7;
             this.btx.Text = "XÓA";
             this.btx.UseVisualStyleBackColor = true;
+            this.btx.Click += new System.EventHandler(this.btx_Click);
             // 
             // btt
             // 
@@ -136,6 +139,19 @@
             this.btt.UseVisualStyleBackColor = true;
             this.btt.Click += new System.EventHandler(this.btThem_Click);
             // 
+            // btget
+            // 
+            this.btget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btget.ForeColor = System.Drawing.Color.Green;
+            this.btget.Location = new System.Drawing.Point(48, 261);
+            this.btget.Name = "btget";
+            this.btget.Size = new System.Drawing.Size(276, 53);
+            this.btget.TabIndex = 8;
+            this.btget.Text = "THÊM";
+            this.btget.UseVisualStyleBackColor = true;
+            this.btget.Click += new System.EventHandler(this.btget_Click);
+            // 
             // frmCNFB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,8 +165,10 @@
             this.Controls.Add(this.tbTen);
             this.Controls.Add(this.bts);
             this.Controls.Add(this.btx);
+            this.Controls.Add(this.btget);
             this.Controls.Add(this.btt);
             this.Name = "frmCNFB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCNFB";
             this.Load += new System.EventHandler(this.frmCNFB_Load);
             this.ResumeLayout(false);
@@ -169,5 +187,6 @@
         private System.Windows.Forms.Button bts;
         private System.Windows.Forms.Button btx;
         private System.Windows.Forms.Button btt;
+        private System.Windows.Forms.Button btget;
     }
 }
