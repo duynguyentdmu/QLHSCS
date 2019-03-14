@@ -38,6 +38,10 @@
             this.btx = new System.Windows.Forms.Button();
             this.btt = new System.Windows.Forms.Button();
             this.btget = new System.Windows.Forms.Button();
+            this.btxtt = new System.Windows.Forms.Button();
+            this.tbTtm = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btTtm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -144,13 +148,59 @@
             this.btget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btget.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btget.ForeColor = System.Drawing.Color.Green;
-            this.btget.Location = new System.Drawing.Point(48, 261);
+            this.btget.Location = new System.Drawing.Point(48, 249);
             this.btget.Name = "btget";
             this.btget.Size = new System.Drawing.Size(276, 53);
             this.btget.TabIndex = 8;
-            this.btget.Text = "THÊM";
+            this.btget.Text = "TẢI";
             this.btget.UseVisualStyleBackColor = true;
-            this.btget.Click += new System.EventHandler(this.btget_Click);
+            this.btget.Click += new System.EventHandler(this.btget_ClickAsync);
+            // 
+            // btxtt
+            // 
+            this.btxtt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btxtt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btxtt.ForeColor = System.Drawing.Color.Green;
+            this.btxtt.Location = new System.Drawing.Point(48, 308);
+            this.btxtt.Name = "btxtt";
+            this.btxtt.Size = new System.Drawing.Size(276, 53);
+            this.btxtt.TabIndex = 8;
+            this.btxtt.Text = "XÓA TẤT CẢ";
+            this.btxtt.UseVisualStyleBackColor = true;
+            this.btxtt.Click += new System.EventHandler(this.btxtt_ClickAsync);
+            // 
+            // tbTtm
+            // 
+            this.tbTtm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTtm.Location = new System.Drawing.Point(495, 383);
+            this.tbTtm.Multiline = true;
+            this.tbTtm.Name = "tbTtm";
+            this.tbTtm.Size = new System.Drawing.Size(260, 37);
+            this.tbTtm.TabIndex = 9;
+            this.tbTtm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(491, 358);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "NHẬP TÊN THƯ MỤC";
+            // 
+            // btTtm
+            // 
+            this.btTtm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTtm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTtm.ForeColor = System.Drawing.Color.Green;
+            this.btTtm.Location = new System.Drawing.Point(190, 374);
+            this.btTtm.Name = "btTtm";
+            this.btTtm.Size = new System.Drawing.Size(276, 53);
+            this.btTtm.TabIndex = 8;
+            this.btTtm.Text = "THÊM THƯ MỤC";
+            this.btTtm.UseVisualStyleBackColor = true;
+            this.btTtm.Click += new System.EventHandler(this.btTtm_Click);
             // 
             // frmCNFB
             // 
@@ -158,14 +208,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbTtm);
             this.Controls.Add(this.tbMasv);
             this.Controls.Add(this.tbTuoi);
             this.Controls.Add(this.tbTen);
             this.Controls.Add(this.bts);
             this.Controls.Add(this.btx);
+            this.Controls.Add(this.btxtt);
             this.Controls.Add(this.btget);
+            this.Controls.Add(this.btTtm);
             this.Controls.Add(this.btt);
             this.Name = "frmCNFB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -188,5 +242,9 @@
         private System.Windows.Forms.Button btx;
         private System.Windows.Forms.Button btt;
         private System.Windows.Forms.Button btget;
+        private System.Windows.Forms.Button btxtt;
+        private System.Windows.Forms.TextBox tbTtm;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btTtm;
     }
 }
