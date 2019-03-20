@@ -72,6 +72,9 @@ namespace QuanLyHoSoSDH
         private void frmLogin_Load(object sender, EventArgs e)
         {
             tbId.Focus();
+
+         
+
             //client = new FireSharp.FirebaseClient(config);
             //if(client!=null)
             //{
